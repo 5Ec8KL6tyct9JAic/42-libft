@@ -2,7 +2,7 @@
 
 ## Description
 
-Le projet **Libft** est la première grande étape à l'école 42. Il consiste à recréer une bibliothèque standard en C, semblable à la célèbre `libc`. L'objectif principal est de se familiariser avec des fonctions de manipulation de chaînes, de mémoire, et d'autres opérations de base en C. Ce projet pose les fondations de la programmation en C, et prépare à la maîtrise des concepts nécessaires pour les projets futurs.
+Le projet **Libft** est la première grande étape à l'école 42. Il consiste à recréer une bibliothèque standard en C. L'objectif principal est de se familiariser avec des fonctions de manipulation de chaînes, de mémoire, et d'autres opérations de base en C. Ce projet pose les fondations de la programmation en C, et prépare à la maîtrise des concepts nécessaires pour les projets futurs.
 
 ## Objectifs
 
