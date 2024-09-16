@@ -41,15 +41,16 @@ La structure du projet est organisée de manière à respecter les standards de 
 
 libft/
 │
-├── includes/ # Contient les fichiers header (.h) 
-│ └── libft.h 
-├── srcs/ # Contient les fichiers source (.c) │ 
-	├── ft_strlen.c │
-	├── ft_strcpy.c │
-	├── ft_memset.c │ 
-	└── ...
-├── Makefile # Fichier permettant de compiler la bibliothèque 
-└── README.md # Ce fichier
+├── includes/          # Contient les fichiers header (.h)
+│   └── libft.h
+├── srcs/              # Contient les fichiers source (.c)
+│   ├── ft_strlen.c
+│   ├── ft_strcpy.c
+│   ├── ft_memset.c
+│   └── ...            # Autres fichiers source
+├── Makefile           # Fichier permettant de compiler la bibliothèque
+└── README.md          # Ce fichier
+
 
 
 ## Compilation
