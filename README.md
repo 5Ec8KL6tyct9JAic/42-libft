@@ -39,19 +39,11 @@ Parmi les fonctions à implémenter, on retrouve :
 
 La structure du projet est organisée de manière à respecter les standards de développement de l'école 42. Voici un exemple de structure typique :
 
-libft/
-│
-├── includes/          # Contient les fichiers header (.h)
-│   └── libft.h
-├── srcs/              # Contient les fichiers source (.c)
-│   ├── ft_strlen.c
-│   ├── ft_strcpy.c
-│   ├── ft_memset.c
-│   └── ...            # Autres fichiers source
-├── Makefile           # Fichier permettant de compiler la bibliothèque
-└── README.md          # Ce fichier
 
-
+- **`includes/`** : Contient les fichiers header (.h).
+- **`srcs/`** : Contient les fichiers source (.c).
+- **`Makefile`** : Pour compiler la bibliothèque.
+- **`README.md`** : Ce fichier.
 
 ## Compilation
 
