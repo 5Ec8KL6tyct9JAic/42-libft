@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@42lausanne.ch>            +#+  +:+       +#+      */
+/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 12:06:39 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/11 11:31:09 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:19:23 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

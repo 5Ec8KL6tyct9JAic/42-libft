@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:39:25 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/20 11:16:44 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:19:59 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 14:41:32 by mako0             #+#    #+#             */
-/*   Updated: 2023/04/21 09:04:00 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:41 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../../includes/libft.h"
+
+#include "libft.h"
 
 int	ft_hexlen(unsigned int n)
 {

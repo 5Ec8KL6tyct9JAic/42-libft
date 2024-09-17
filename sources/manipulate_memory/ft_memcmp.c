@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:34:42 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/18 13:08:34 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:12 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

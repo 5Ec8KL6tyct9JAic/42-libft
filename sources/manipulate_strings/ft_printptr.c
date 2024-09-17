@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printptr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 14:07:27 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/04/21 08:59:00 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:49 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_ptrlen(unsigned long long n)
 {

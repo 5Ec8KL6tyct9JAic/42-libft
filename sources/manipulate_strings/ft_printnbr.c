@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 14:05:57 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/04/21 08:53:36 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:45 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_printnbr(int n)
 {

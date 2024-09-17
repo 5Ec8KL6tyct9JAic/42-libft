@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@42lausanne.ch>          +#+  +:+       +#+        */
+/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:05:45 by dvalerio          #+#    #+#             */
-/*   Updated: 2024/01/19 12:51:57 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:18:58 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int		ft_get_line_break(int fd, char **stash);
 char	*ft_get_line(char **stash);

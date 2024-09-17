@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:42:54 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/20 11:16:45 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:05 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

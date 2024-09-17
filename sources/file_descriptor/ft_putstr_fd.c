@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:36:17 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/18 12:58:53 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:18:34 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 15:21:14 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/08 15:16:33 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:19:37 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 static int	ft_len(unsigned int nb)
 {

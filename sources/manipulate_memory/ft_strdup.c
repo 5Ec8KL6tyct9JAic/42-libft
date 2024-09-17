@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:14:44 by dvalerio          #+#    #+#             */
-/*   Updated: 2022/10/18 13:00:42 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:20:29 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

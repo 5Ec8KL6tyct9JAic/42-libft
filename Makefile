@@ -6,17 +6,17 @@
 #    By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 13:16:56 by dvalerio          #+#    #+#              #
-#    Updated: 2022/10/21 11:38:31 by dvalerio         ###   ########.fr        #
+#    Updated: 2024/09/17 16:16:40 by dvalerio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-# Nom du fichier cible
+
 NAME = libft.a
 
 # Compilateur
 CC = gcc
 
 # Options de compilation
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -I includes/
 
 # Utilitaire d'archivage
 AR = ar rcs

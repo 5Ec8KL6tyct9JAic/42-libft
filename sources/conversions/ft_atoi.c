@@ -6,11 +6,11 @@
 /*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 17:13:43 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/08 15:13:31 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/09/17 16:13:41 by dvalerio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
