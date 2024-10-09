@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davvaler <davvaler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 15:19:02 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/08 15:19:09 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:20:00 by davvaler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*res;
+	size_t	i;
+	char	*ret;
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	i = ft_strlen(s);
+	if (start >= i)
 	{
-		res = malloc(1);
-		res[0] = '\0';
-		return (res);
+		ret = (char *)malloc(sizeof(char) * (1));
+		if (!ret)
+			return (NULL);
+		ret[0] = '\0';
+		return (ret);
 	}
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	res = malloc(len + 1);
-	if (!res)
+	if (len > i - start)
+		len = i - start;
+	i = 0;
+	ret = (char *)malloc(sizeof(char) * (len + 1));
+	if (!ret)
 		return (NULL);
-	ft_strlcpy(res, s + start, len + 1);
-	return (res);
+	ft_strlcpy(ret, s + start, len + 1);
+	return (ret);
 }

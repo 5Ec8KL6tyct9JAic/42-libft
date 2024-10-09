@@ -3,75 +3,102 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davvaler <davvaler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 12:02:07 by dvalerio          #+#    #+#             */
-/*   Updated: 2023/12/08 15:18:55 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:20:17 by davvaler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(const char *str, char c)
+int	ft_count_words(char const *s, char c)
+{
+	int	nb_w;
+	int	in_words;
+
+	nb_w = 0;
+	in_words = 0;
+	while (*s)
+	{
+		if (*s != c && in_words == 0)
+		{
+			in_words = 1;
+			nb_w++;
+		}
+		else if (*s == c)
+			in_words = 0;
+		s++;
+	}
+	return (nb_w);
+}
+
+int	ft_count_char(char const *s, char c)
+{
+	int	nb_c;
+
+	nb_c = 0;
+	while (*s && *s == c)
+		s++;
+	while (*s && *s != c)
+	{
+		nb_c++;
+		s++;
+	}
+	return (nb_c);
+}
+
+void	ft_free(char **tab, int nb_w)
 {
 	int	i;
-	int	trigger;
 
 	i = 0;
-	trigger = 0;
-	while (*str)
-	{
-		if (*str != c && trigger == 0)
-		{
-			trigger = 1;
-			i++;
-		}
-		else if (*str == c)
-			trigger = 0;
-		str++;
-	}
-	return (i);
+	while (i < nb_w && tab[i])
+		free(tab[i++]);
+	free(tab);
 }
 
-static char	*word_dup(const char *str, int start, int finish)
+int	ft_star_to_stars(char **tab, char const *s, char c, int nb_w)
 {
-	int		i;
-	char	*res;
+	int	word;
+	int	i;
 
-	i = 0;
-	res = (char *)malloc(sizeof(char) * (finish - start) + 1);
-	if (!res)
+	word = 0;
+	while (word < nb_w)
+	{
+		while (*s && *s == c)
+			s++;
+		tab[word] = (char *)malloc(sizeof(char) * (ft_count_char(s, c) + 1));
+		if (!tab[word])
+		{
+			ft_free(tab, word);
+			return (0);
+		}
+		i = 0;
+		while (*s && *s != c)
+		{
+			tab[word][i++] = *s;
+			s++;
+		}
+		tab[word][i] = '\0';
+		word++;
+	}
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	int		nb_w;
+
+	if (!s)
 		return (NULL);
-	while (start < finish)
-		res[i++] = str[start++];
-	res[i] = '\0';
-	return (res);
-}
-
-char	**ft_split(char const *str, char const c)
-{
-	size_t	i;
-	size_t	j;
-	int		index;
-	char	**res;
-
-	i = 0;
-	j = 0;
-	res = malloc((count_words(str, c) + 1) * sizeof(char *));
-	if (!str || !res)
-		return (0);
-	index = -1;
-	while (i <= ft_strlen(str))
-	{
-		if (str[i] != c && index < 0)
-			index = i;
-		else if ((str[i] == c || i == ft_strlen(str)) && index >= 0)
-		{
-			res[j++] = word_dup(str, index, i);
-			index = -1;
-		}
-		i++;
-	}
-	res[j] = 0;
-	return (res);
+	nb_w = ft_count_words(s, c);
+	tab = (char **)malloc(sizeof(char *) * (nb_w + 1));
+	if (!tab)
+		return (NULL);
+	if (!ft_star_to_stars(tab, s, c, nb_w))
+		return (NULL);
+	tab[nb_w] = NULL;
+	return (tab);
 }
