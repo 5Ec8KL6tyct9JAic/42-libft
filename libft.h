@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@42lausanne.ch>          +#+  +:+       +#+        */
+/*   By: davvaler <davvaler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:26:05 by dvalerio          #+#    #+#             */
-/*   Updated: 2024/01/19 12:51:33 by dvalerio         ###   ########.fr       */
+/*   Updated: 2024/10/09 12:37:18 by davvaler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdio.h>
 # include <stddef.h>
-# include <string.h>
 # include <ctype.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -23,8 +22,11 @@
 # include <limits.h>
 # include <fcntl.h>
 
-//buffer size of GNL
-# define BUFFER_SIZE 1000
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 /* -------◊    FUNCTIONS TO MANIPULATE CHARACTERS    ◊------- */
 int				ft_isalnum(int c);
@@ -34,16 +36,12 @@ int				ft_isdigit(int c);
 int				ft_isprint(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-int				ft_putchar(char c);
-int				ft_putnbr(int nb);
-int				ft_putnbr_unsigned(unsigned int number);
 
 /* -------◊    FUNCTIONS TO MANIPULATE STRINGS    ◊------- */
 size_t			ft_strlen(const char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-int				ft_putstr(char *str);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
@@ -53,9 +51,6 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *str, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-int				ft_printptr(void *n, const char form);
-int				ft_printhex(unsigned int n, const char form);
-int				ft_printnbr(int n);
 
 /* -------◊        FUNCTIONS TO CONVERSION/STRINGS FOR INTEGERS    ◊------- */
 int				ft_atoi(const char *nptr);
@@ -77,10 +72,16 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
-/* -------◊    GNL    ◊------- */
-char			*get_next_line(int fd);
-
-/* -------◊    PRINTF    ◊------- */
-int				ft_printf(char const *str, ...);
+/* -----------------◊        Bonus    ◊------------------ */
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int				ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
+void			ft_lstdelone(t_list *lst, void (*del)(void*));
+void			ft_lstclear(t_list **lst, void (*del)(void *));
+void			ft_lstiter(t_list *lst, void (*f)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 
 #endif

@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnbr.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dvalerio <dvalerio@student.42.fr>          +#+  +:+       +#+        */
+/*   By: davvaler <davvaler@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 14:05:57 by dvalerio          #+#    #+#             */
-/*   Updated: 2024/09/17 16:20:45 by dvalerio         ###   ########.fr       */
+/*   Created: 2024/10/09 12:35:47 by davvaler          #+#    #+#             */
+/*   Updated: 2024/10/09 12:35:49 by davvaler         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_printnbr(int n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int		len;
-	char	*res;
+	t_list	*tmp;
 
-	res = ft_itoa(n);
-	len = ft_putstr(res);
-	free(res);
-	return (len);
+	if (!lst || !del)
+		return ;
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
+	}
+	*lst = NULL;
 }
